@@ -90,19 +90,33 @@
       to   { transform: scale(1.08); }
     }
 
-    .hero-scroll-hint {
-      position: absolute;
-      left: 50%;
-      bottom: 24px;
-      transform: translateX(-50%);
-      font-family: "Noto Serif Display", serif;
-      font-style: italic;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.75);
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
-    }
+.hero-scroll-icon {
+  position: absolute;
+  left: 50%;
+  top: 85%;  /* apare mai jos */
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: auto;
+  pointer-events: none;
+  z-index: 10;
+
+  animation: scrollSimple 2s ease-out infinite;
+  opacity: 0;
+}
+
+@keyframes scrollSimple {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 30px);   /* începe jos */
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -40px); /* se duce în sus */
+  }
+}
 
     /* 
     SECTIUNEA ALBĂ – INVITAȚIE
@@ -441,9 +455,12 @@
     <div class="hero-slide"></div>
     <div class="hero-slide"></div>
 
-    <div class="hero-scroll-hint">
-      Scroll pentru invitație
-    </div>
+    <img
+      src="images/hand-gesture.svg"
+      alt="Scroll hint"
+      class="hero-scroll-icon"
+    />
+
   </section>
 
   <!-- 
