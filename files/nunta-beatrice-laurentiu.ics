@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:-//ChatGPT//Custom Event//EN
+BEGIN:VEVENT
+UID:beatrice-laurentiu-wedding-2026
+SUMMARY:✨ Nuntă Beatrice și Laurențiu
+DTSTART:20260509T193000
+DTEND:20260510T060000
+LOCATION:La Castel\, Aleea Mihail Sadoveanu 82 A\, Iași 700489\, România
+DESCRIPTION:🎉 Te așteptăm cu drag să sărbătorim împreună cea mai importantă zi din viața noastră!
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:✨ Hei! Nunta noastră este în curând!
+TRIGGER;VALUE=DATE-TIME:20260421T090000
+END:VALARM
+END:VEVENT
+END:VCALENDAR
