@@ -5,7 +5,7 @@
   <title>Beatrice &amp; Laurențiu - Save the Date</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- FONTURI -->
+  <!-- Custom Fonts -->
   <style>
 @font-face {
   font-family: "Palash";
@@ -47,7 +47,7 @@
 
   <style>
     /* 
-    RESET & BAZE
+    Reset & Base Styles
     ------------------------------------------------------------------ */
     *,
     *::before,
@@ -81,7 +81,7 @@
     }
 
     /* 
-    HERO SLIDESHOW
+    Hero Slideshow
     ------------------------------------------------------------------ */
     .hero {
       position: relative;
@@ -99,7 +99,7 @@
       opacity: 0;
       transition: opacity 1.5s ease-in-out;
       transform: scale(1);
-      animation: heroZoom 20s ease-in-out infinite alternate;
+      animation: heroZoom 5s ease-in-out infinite alternate;
     }
 
     .hero-slide.is-active {
@@ -112,36 +112,35 @@
       to   { transform: scale(1.08); }
     }
 
-.hero-scroll-icon {
-  position: absolute;
-  left: 50%;
-  top: 85%;  /* apare mai jos */
-  transform: translate(-50%, -50%);
-  width: 42px;
-  height: auto;
-  pointer-events: none;
-  z-index: 10;
+    .hero-scroll-icon {
+      position: absolute;
+      left: 50%;
+      top: 85%;
+      transform: translate(-50%, -50%);
+      width: 42px;
+      height: auto;
+      pointer-events: none;
+      z-index: 10;
+      animation: scrollSimple 2s ease-out infinite;
+      opacity: 0;
+    }
 
-  animation: scrollSimple 2s ease-out infinite;
-  opacity: 0;
-}
-
-@keyframes scrollSimple {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, 30px);   /* începe jos */
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -40px); /* se duce în sus */
-  }
-}
+    @keyframes scrollSimple {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 30px);
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -40px);
+      }
+    }
 
     /* 
-    SECTIUNEA ALBĂ – INVITAȚIE
+    White Invitation Section
     ------------------------------------------------------------------ */
     .invitation-section {
       width: 100%;
@@ -156,7 +155,7 @@
       position: relative;
     }
 
-    /* TOP GRAFIC */
+    /* Top Graphic (Flowers & Logo) */
     .top-graphic {
       margin-top: 0;
       margin-bottom: 10vh;
@@ -172,7 +171,7 @@
       margin: 3vh auto 0;
     }
 
-    /* SAVE THE DATE */
+    /* Save the Date Block */
     .save-the-date {
       margin-top: 6vh;
     }
@@ -181,14 +180,9 @@
       font-family: "Palash";
       font-weight: 400;
       color: #3a3a3a;
-
-
-    /* centrare reală */
       display: inline-block;
       margin: 0 auto 1.5vh;
       text-align: center;
-
-    /* font fluid */
       font-size: clamp(3.1rem, 5.2vw, 5.2rem);
     }
 
@@ -196,22 +190,17 @@
       font-family: "Spectral", serif;
       text-transform: uppercase;
       color: #777;
-
-    /* centrare reală */
       display: inline-block;
       margin: 0 auto 0;
       text-align: center;
-
-    /* fluid & proporțional */
       font-size: clamp(1rem, 1.6vw, 1.8rem);
     }
 
+    /* Countdown Layout */
     .countdown-grid {
-    /* centrat perfect */
       display: inline-grid;
       margin: 0 auto;
       text-align: center;
-
       grid-template-columns: repeat(4, minmax(60px, 1fr));
       gap: 2vw;
       align-items: baseline;
@@ -219,7 +208,7 @@
     }
 
     .save-calendar-wrapper {
-      margin-top: 1vh;   /* distanță MĂRITĂ între countdown și buton */
+      margin-top: 1vh;
       margin-bottom: 10vh;
     }
 
@@ -233,7 +222,7 @@
       margin: 10vh auto;
     }
 
-    /* COUNTDOWN */
+    /* Countdown Block */
     .countdown-block {
       margin-bottom: 4vh;
     }
@@ -259,7 +248,7 @@
       font-size: clamp(1rem, 1.3vw, 1.3rem);
     }
 
-    /* BUTOANE */
+    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -289,7 +278,7 @@
       height: 20px;
     }
 
-    /* EVENIMENTE */
+    /* Event Cards */
     .event-section {
       margin-bottom: 12vh;
     }
@@ -317,163 +306,146 @@
       margin-bottom: 1.8rem;
     }
 
-/* ------------------------------------------------------ */
-/* RESPONSIVE – MOBIL < 768px */
-/* ------------------------------------------------------ */
-@media (max-width: 767px) {
+    /* ------------------------------------------------------ */
+    /* Responsive – Mobile < 768px                            */
+    /* ------------------------------------------------------ */
+    @media (max-width: 767px) {
 
-  /* Flowers 90% */
-  .top-graphic__flowers {
-    width: 90vw;
-  }
+      .top-graphic__flowers {
+        width: 90vw;
+      }
 
-  /* Logo 70% */
-  .top-graphic__logo {
-    width: 70vw;
-    margin-top: 6vh; /* pastreaza aerul */
-  }
+      .top-graphic__logo {
+        width: 70vw;
+        margin-top: 6vh;
+      }
 
-  /* Save the date marit */
-  .save-the-date__title {
-    font-size: 3.6rem;
-  }
+      .save-the-date__title {
+        font-size: 3.6rem;
+      }
 
-  /* Data marita */
-  .save-the-date__date {
-    font-size: 1.2rem;
-  }
+      .save-the-date__date {
+        font-size: 1.2rem;
+      }
 
-  /* Divider 90% */
-  .divider {
-    width: 90vw;
-  }
+      .divider {
+        width: 90vw;
+      }
 
-  /* AUMR text marit */
-  .countdown-label {
-    font-size: 1.4rem;
-    margin-bottom: 6vh;
-  }
+      .countdown-label {
+        font-size: 1.4rem;
+        margin-bottom: 6vh;
+      }
 
-  /* Titluri carduri */
-  .event-title {
-    font-size: 1.6rem;
-  }
+      .event-title {
+        font-size: 1.6rem;
+      }
 
-  /* Detalii carduri */
-  .event-details {
-    font-size: 1rem;
-  }
+      .event-details {
+        font-size: 1rem;
+      }
 
-  /* Countdown vertical + marit */
-  .countdown-grid {
-    width: 90vw;
-    display: flex;
-    flex-direction: column;
-    gap: 5vh;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 4vh;
-  }
+      .countdown-grid {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4vh;
+      }
 
-  .countdown-item {
-    width: 100%;
-    text-align: center;
-  }
+      .countdown-item {
+        width: 100%;
+        text-align: center;
+      }
 
-  .countdown-number {
-    font-size: 3.4rem;
-  }
+      .countdown-number {
+        font-size: 3.4rem;
+      }
 
-  .countdown-unit {
-    font-size: 1.2rem;
-  }
-}
+      .countdown-unit {
+        font-size: 1.2rem;
+      }
+    }
 
-/* ------------------------------------------------------ */
-/* RESPONSIVE – TABLETĂ 768px - 1023px (versiunea corectată) */
-/* ------------------------------------------------------ */
-@media (min-width: 768px) and (max-width: 1023px) {
+    /* ------------------------------------------------------ */
+    /* Responsive – Tablet 768px - 1023px                    */
+    /* ------------------------------------------------------ */
+    @media (min-width: 768px) and (max-width: 1023px) {
 
-  /* 1) Florile 80% pe tableta */
-  .top-graphic__flowers {
-    width: 80vw;
-  }
+      .top-graphic__flowers {
+        width: 80vw;
+      }
 
-  /* 2) Logo mai mare (50% din latimea display-ului) */
-  .top-graphic__logo {
-    width: 50vw;
-    margin-top: 5vh;
-  }
+      .top-graphic__logo {
+        width: 50vw;
+        margin-top: 5vh;
+      }
 
-  /* 3) Save the date – trebuie FORTAT pe rand separat */
-  .save-the-date__title {
-    font-size: clamp(5.2rem, 4.5vw, 5rem);
-    display: block;      /* fortam rand nou */
-    width: 100%;
-  }
+      .save-the-date__title {
+        font-size: clamp(5.2rem, 4.5vw, 5rem);
+        display: block;
+        width: 100%;
+      }
 
-  /* Data – randul 2, centrat perfect */
-  .save-the-date__date {
-    font-size: clamp(1.4rem, 2vw, 2rem);
-    display: block;
-    width: 100%;
-    margin-top: 1vh;
-    margin-bottom: 5vh;
-  }
+      .save-the-date__date {
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        display: block;
+        width: 100%;
+        margin-top: 1vh;
+        margin-bottom: 5vh;
+      }
 
-  /* 4) Divider mai mare pe tableta (70% din display) */
-  .divider {
-    width: 70vw;
-  }
+      .divider {
+        width: 70vw;
+      }
 
-  /* 5) Countdown – fonturi mai mari */
-  .countdown-label {
-    font-size: clamp(1.6rem, 2vw, 2.4rem);
-    margin-bottom: 4vh;
-  }
+      .countdown-label {
+        font-size: clamp(1.6rem, 2vw, 2.4rem);
+        margin-bottom: 4vh;
+      }
 
-  .countdown-grid {
-    width: 70vw;
-    gap: 3vw;
-  }
+      .countdown-grid {
+        width: 70vw;
+        gap: 3vw;
+      }
 
-  .countdown-number {
-    font-size: clamp(3.2rem, 4vw, 4.4rem);
-  }
+      .countdown-number {
+        font-size: clamp(3.2rem, 4vw, 4.4rem);
+      }
 
-  .countdown-unit {
-    font-size: clamp(1.3rem, 1.8vw, 2rem);
-  }
+      .countdown-unit {
+        font-size: clamp(1.3rem, 1.8vw, 2rem);
+      }
 
-  /* 6) Icon-uri evenimente putin mai mari */
-  .event-icon {
-    width: 160px;
-  }
+      .event-icon {
+        width: 160px;
+      }
 
-  /* 7) Titlurile evenimentelor un pic mai mari */
-  .event-title {
-    font-size: 2.6rem;
-  }
+      .event-title {
+        font-size: 2.6rem;
+      }
 
-  /* 8) Detaliile evenimentelor putin mai mari */
-  .event-details {
-    font-size: 1.35rem;
-  }
+      .event-details {
+        font-size: 1.35rem;
+      }
 
-  .divider {
-  width: 70vw;
-  margin: 6vh auto;   /* vizibil + spațiere corectă */
-  display: block;    
- }
-}
+      .divider {
+        width: 70vw;
+        margin: 6vh auto;
+        display: block;
+      }
+    }
 
   </style>
 </head>
 <body>
-  <!-- 
-    1) SECTIUNE HERO CU SLIDESHOW
-  -->
+  <!-- Hero Section with Slideshow -->
   <section class="hero" id="hero">
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
     <div class="hero-slide"></div>
     <div class="hero-slide"></div>
 
@@ -482,16 +454,13 @@
       alt="Scroll hint"
       class="hero-scroll-icon"
     />
-
   </section>
 
-  <!-- 
-    2) SECTIUNEA PRINCIPALA - INVITAȚIA (CANVAS ALB)
-  -->
+  <!-- Main Invitation Section (White Canvas) -->
   <section class="invitation-section" id="invitation">
     <div class="invitation-wrapper">
 
-      <!-- TOP GRAFIC -->
+      <!-- Top Graphic -->
       <div class="top-graphic">
         <img
           src="images/flowers.svg"
@@ -506,7 +475,7 @@
         />
       </div>
 
-      <!-- SAVE THE DATE -->
+      <!-- Save the Date -->
       <div class="save-the-date">
         <h1 class="save-the-date__title">Save the date!</h1>
 
@@ -521,7 +490,7 @@
         />
       </div>
 
-      <!-- COUNTDOWN -->
+      <!-- Countdown -->
       <div class="countdown-block">
         <div class="countdown-label">Au mai rămas:</div>
 
@@ -548,20 +517,18 @@
         </div>
 
         <div class="save-calendar-wrapper">
-	  <a 
-  	    href="files/nunta-beatrice-laurentiu.ics" 
-  	    download="nunta-beatrice-laurentiu.ics"
-  	    class="btn btn--pink"
-  	  >
-    		<img src="images/icon-red-heart.svg" alt="" class="btn-icon" />
-    		SALVEAZĂ ÎN CALENDAR
-	  </a>
-
+          <a 
+            href="files/nunta-beatrice-laurentiu.ics" 
+            download="nunta-beatrice-laurentiu.ics"
+            class="btn btn--pink"
+          >
+            <img src="images/icon-red-heart.svg" alt="" class="btn-icon" />
+            SALVEAZĂ ÎN CALENDAR
+          </a>
         </div>
-
       </div>
 
-      <!-- CEREMONIA RELIGIOASĂ -->
+      <!-- Ceremony Card -->
       <div class="event-section">
         <img
           src="images/icon-rings.svg"
@@ -572,7 +539,7 @@
         <div class="event-title">Ceremonia religioasă</div>
 
         <div class="event-details">
-          BISERICA „ADORMIREA MAICII DOMNULUI”<br />
+          CATEDRALA „ADORMIREA MAICII DOMNULUI”<br />
           IAȘI · 15:00
         </div>
 
@@ -587,7 +554,7 @@
         </a>
       </div>
 
-      <!-- PETRECEREA -->
+      <!-- Party Card -->
       <div class="event-section">
         <img
           src="images/icon-champagne-glasses.svg"
@@ -615,13 +582,11 @@
 
     </div>
   </section>
-  <!-- 
-    SCRIPTURI
-    ------------------------------------------------------------------
-  -->
+
+  <!-- Scripts -->
   <script>
     /*
-      1) SLIDESHOW CU DETECTAREA ORIENTĂRII DISPOZITIVULUI
+      Script Image Shuffle (Hero Slideshow with Orientation Detection)
     */
     (function () {
       const slides = document.querySelectorAll(".hero-slide");
@@ -634,8 +599,20 @@
 
       function getImagesForOrientation(orientation) {
         return orientation === "landscape"
-          ? ["images/landscape1.jpg", "images/landscape2.jpg"]
-          : ["images/portrait1.jpg", "images/portrait2.jpg"];
+          ? [
+              "images/landscape1.jpg",
+              "images/landscape2.jpg",
+              "images/landscape3.jpg",
+              "images/landscape4.jpg",
+              "images/landscape5.jpg",
+            ]
+          : [
+              "images/portrait1.jpg",
+              "images/portrait2.jpg",
+              "images/portrait3.jpg",
+              "images/portrait4.jpg",
+              "images/portrait5.jpg",
+            ];
       }
 
       let currentOrientation = getOrientation();
@@ -652,7 +629,7 @@
         slides[currentSlide].classList.remove("is-active");
         currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].classList.add("is-active");
-      }, 35000);
+      }, 5000);
 
       window.addEventListener("resize", () => {
         const newOrientation = getOrientation();
@@ -667,10 +644,10 @@
     })();
 
     /*
-      2) COUNTDOWN PÂNĂ LA 9 MAI 2026
+      Script Countdown (until 9 May 2026)
     */
     (function () {
-      const target = new Date(2026, 4, 9, 0, 0, 0);
+      const target = new Date(2026, 4, 9, 19, 30, 0);
 
       const elDays = document.getElementById("count-days");
       const elHours = document.getElementById("count-hours");
@@ -704,7 +681,3 @@
 
 </body>
 </html>
-
-
-
-
