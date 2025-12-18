@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
   <meta charset="UTF-8" />
   <title>Beatrice &amp; Laurențiu - Save the Date</title>
@@ -7,43 +8,42 @@
 
   <!-- Custom Fonts -->
   <style>
-@font-face {
-  font-family: "Palash";
-  src: url("fonts/Palash-Regular.woff2") format("woff2"),
-       url("fonts/Palash-Regular.woff") format("woff"),
-       url("fonts/Palash-Regular.ttf") format("truetype");
-}
+    @font-face {
+      font-family: "Palash";
+      src: url("fonts/Palash-Regular.woff2") format("woff2"),
+        url("fonts/Palash-Regular.woff") format("woff"),
+        url("fonts/Palash-Regular.ttf") format("truetype");
+    }
 
-@font-face {
-  font-family: "Spectral";
-  src: url("fonts/Spectral-Regular.woff2") format("woff2"),
-       url("fonts/Spectral-Regular.woff") format("woff"),
-       url("fonts/Spectral-Regular.ttf") format("truetype");
-}
+    @font-face {
+      font-family: "Spectral";
+      src: url("fonts/Spectral-Regular.woff2") format("woff2"),
+        url("fonts/Spectral-Regular.woff") format("woff"),
+        url("fonts/Spectral-Regular.ttf") format("truetype");
+    }
 
-@font-face {
-  font-family: "Noto Serif Display";
-  src: url("fonts/NotoSerifDisplay-Italic.woff2") format("woff2"),
-       url("fonts/NotoSerifDisplay-Italic.woff") format("woff"),
-       url("fonts/NotoSerifDisplay-Italic.ttf") format("truetype");
-  font-style: italic;
-}
+    @font-face {
+      font-family: "Noto Serif Display";
+      src: url("fonts/NotoSerifDisplay-Italic.woff2") format("woff2"),
+        url("fonts/NotoSerifDisplay-Italic.woff") format("woff"),
+        url("fonts/NotoSerifDisplay-Italic.ttf") format("truetype");
+      font-style: italic;
+    }
 
-@font-face {
-  font-family: "Figtree";
-  src: url("fonts/Figtree-Bold.woff2") format("woff2"),
-       url("fonts/Figtree-Bold.woff") format("woff"),
-       url("fonts/Figtree-Bold.ttf") format("truetype");
-  font-weight: 700;
-}
+    @font-face {
+      font-family: "Figtree";
+      src: url("fonts/Figtree-Bold.woff2") format("woff2"),
+        url("fonts/Figtree-Bold.woff") format("woff"),
+        url("fonts/Figtree-Bold.ttf") format("truetype");
+      font-weight: 700;
+    }
   </style>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Spectral:wght@400&family=Noto+Serif+Display:ital@1&family=Figtree:wght@700&display=swap"
-    rel="stylesheet"
-  />
+    rel="stylesheet" />
 
   <style>
     /* 
@@ -108,8 +108,13 @@
     }
 
     @keyframes heroZoom {
-      from { transform: scale(1); }
-      to   { transform: scale(1.08); }
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.08);
+      }
     }
 
     .hero-scroll-icon {
@@ -130,9 +135,11 @@
         opacity: 0;
         transform: translate(-50%, 30px);
       }
+
       10% {
         opacity: 1;
       }
+
       100% {
         opacity: 0;
         transform: translate(-50%, -40px);
@@ -266,8 +273,16 @@
       transition: filter 0.2s ease;
     }
 
-    .btn--pink { background: #F46B6B; color: #fff; margin-top: 8vh;}
-    .btn--blue { background: #E9E9E9; color: #333; }
+    .btn--pink {
+      background: #F46B6B;
+      color: #fff;
+      margin-top: 8vh;
+    }
+
+    .btn--blue {
+      background: #E9E9E9;
+      color: #333;
+    }
 
     .btn:hover {
       filter: brightness(0.9);
@@ -367,6 +382,10 @@
       .countdown-unit {
         font-size: 1.2rem;
       }
+
+      .instagram-wrapper {
+        padding-bottom: 220px;
+      }
     }
 
     /* ------------------------------------------------------ */
@@ -438,8 +457,19 @@
       }
     }
 
+    .instagram-wrapper {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 160px;
+    }
+
+    .instagram-wrapper blockquote {
+      max-width: 640px;
+      width: 100%;
+    }
   </style>
 </head>
+
 <body>
   <!-- Hero Section with Slideshow -->
   <section class="hero" id="hero">
@@ -449,11 +479,7 @@
     <div class="hero-slide"></div>
     <div class="hero-slide"></div>
 
-    <img
-      src="images/hand-gesture.svg"
-      alt="Scroll hint"
-      class="hero-scroll-icon"
-    />
+    <img src="images/hand-gesture.svg" alt="Scroll hint" class="hero-scroll-icon" />
   </section>
 
   <!-- Main Invitation Section (White Canvas) -->
@@ -462,17 +488,9 @@
 
       <!-- Top Graphic -->
       <div class="top-graphic">
-        <img
-          src="images/flowers.svg"
-          alt="Decor floral"
-          class="top-graphic__flowers"
-        />
+        <img src="images/flowers.svg" alt="Decor floral" class="top-graphic__flowers" />
 
-        <img
-          src="images/logo-beatrice-laurentiu.svg"
-          alt="Beatrice și Laurențiu"
-          class="top-graphic__logo"
-        />
+        <img src="images/logo-beatrice-laurentiu.svg" alt="Beatrice și Laurențiu" class="top-graphic__logo" />
       </div>
 
       <!-- Save the Date -->
@@ -483,11 +501,7 @@
           SÂMBĂTĂ, 9 MAI 2026
         </div>
 
-        <img
-          src="images/divider-line.svg"
-          alt=""
-          class="divider"
-        />
+        <img src="images/divider-line.svg" alt="" class="divider" />
       </div>
 
       <!-- Countdown -->
@@ -517,11 +531,7 @@
         </div>
 
         <div class="save-calendar-wrapper">
-          <a 
-            href="files/nunta-beatrice-laurentiu.ics" 
-            download="nunta-beatrice-laurentiu.ics"
-            class="btn btn--pink"
-          >
+          <a href="files/nunta-beatrice-laurentiu.ics" download="nunta-beatrice-laurentiu.ics" class="btn btn--pink">
             <img src="images/icon-red-heart.svg" alt="" class="btn-icon" />
             SALVEAZĂ ÎN CALENDAR
           </a>
@@ -530,11 +540,7 @@
 
       <!-- Ceremony Card -->
       <div class="event-section">
-        <img
-          src="images/icon-rings.svg"
-          alt="Inele"
-          class="event-icon"
-        />
+        <img src="images/icon-rings.svg" alt="Inele" class="event-icon" />
 
         <div class="event-title">Ceremonia religioasă</div>
 
@@ -543,12 +549,8 @@
           IAȘI · 15:00
         </div>
 
-        <a
-          href="https://maps.app.goo.gl/AJXRZfY6rN5Po39u8"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn--blue"
-        >
+        <a href="https://maps.app.goo.gl/AJXRZfY6rN5Po39u8" target="_blank" rel="noopener noreferrer"
+          class="btn btn--blue">
           <img src="images/icon-blue-arrow.svg" alt="" class="btn-icon" />
           OBȚINE DIRECȚII
         </a>
@@ -556,11 +558,7 @@
 
       <!-- Party Card -->
       <div class="event-section">
-        <img
-          src="images/icon-champagne-glasses.svg"
-          alt="Pahare șampanie"
-          class="event-icon"
-        />
+        <img src="images/icon-champagne-glasses.svg" alt="Pahare șampanie" class="event-icon" />
 
         <div class="event-title">Petrecerea</div>
 
@@ -569,12 +567,8 @@
           IAȘI · 19:30
         </div>
 
-        <a
-          href="https://maps.app.goo.gl/eVy1f9uX9Cb79Aw7A"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn--blue"
-        >
+        <a href="https://maps.app.goo.gl/eVy1f9uX9Cb79Aw7A" target="_blank" rel="noopener noreferrer"
+          class="btn btn--blue">
           <img src="images/icon-blue-arrow.svg" alt="" class="btn-icon" />
           OBȚINE DIRECȚII
         </a>
@@ -600,19 +594,19 @@
       function getImagesForOrientation(orientation) {
         return orientation === "landscape"
           ? [
-              "images/landscape1.jpg",
-              "images/landscape2.jpg",
-              "images/landscape3.jpg",
-              "images/landscape4.jpg",
-              "images/landscape5.jpg",
-            ]
+            "images/landscape1.jpg",
+            "images/landscape2.jpg",
+            "images/landscape3.jpg",
+            "images/landscape4.jpg",
+            "images/landscape5.jpg",
+          ]
           : [
-              "images/portrait1.jpg",
-              "images/portrait2.jpg",
-              "images/portrait3.jpg",
-              "images/portrait4.jpg",
-              "images/portrait5.jpg",
-            ];
+            "images/portrait1.jpg",
+            "images/portrait2.jpg",
+            "images/portrait3.jpg",
+            "images/portrait4.jpg",
+            "images/portrait5.jpg",
+          ];
       }
 
       let currentOrientation = getOrientation();
@@ -643,41 +637,80 @@
       });
     })();
 
-    /*
-      Script Countdown (until 9 May 2026)
-    */
-    (function () {
-      const target = new Date(2026, 4, 9, 19, 30, 0);
+    function getRomaniaNow() {
+      return new Date(
+        new Date().toLocaleString("en-US", { timeZone: "Europe/Bucharest" })
+      );
+    }
 
-      const elDays = document.getElementById("count-days");
-      const elHours = document.getElementById("count-hours");
-      const elMinutes = document.getElementById("count-minutes");
-      const elSeconds = document.getElementById("count-seconds");
+    function getRomaniaDate(y, m, d, h, min, s) {
+      return new Date(
+        new Date(Date.UTC(y, m, d, h, min, s))
+          .toLocaleString("en-US", { timeZone: "Europe/Bucharest" })
+      );
+    }
 
-      function pad(n, len) {
-        return String(n).padStart(len, "0");
-      }
+    // 9 mai 2026, 19:30 ora României
+    const target = getRomaniaDate(2026, 4, 9, 19, 30, 0);
 
-      function update() {
-        let diff = target - new Date();
-        if (diff < 0) diff = 0;
+    function update() {
+      const now = getRomaniaNow();
+      let diff = target - now;
+      if (diff < 0) diff = 0;
 
-        const totalSec = Math.floor(diff / 1000);
-        const days = Math.floor(totalSec / 86400);
-        const hours = Math.floor((totalSec % 86400) / 3600);
-        const minutes = Math.floor((totalSec % 3600) / 60);
-        const seconds = totalSec % 60;
+      const totalSec = Math.floor(diff / 1000);
+      const days = Math.floor(totalSec / 86400);
+      const hours = Math.floor((totalSec % 86400) / 3600);
+      const minutes = Math.floor((totalSec % 3600) / 60);
+      const seconds = totalSec % 60;
 
-        elDays.textContent = pad(days, 3);
-        elHours.textContent = pad(hours, 2);
-        elMinutes.textContent = pad(minutes, 2);
-        elSeconds.textContent = pad(seconds, 2);
-      }
+      document.getElementById("count-days").textContent = String(days).padStart(3, "0");
+      document.getElementById("count-hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("count-minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("count-seconds").textContent = String(seconds).padStart(2, "0");
+    }
 
-      update();
-      setInterval(update, 1000);
-    })();
+    update();
+    setInterval(update, 1000);
   </script>
 
+  <div class="instagram-wrapper" id="ig-embed" data-ig-url="https://www.instagram.com/reel/DOO3rTbEkaa/">
+  </div>
+
+  <!-- Instagram Video -->
+  <script>
+    (function () {
+      const holder = document.getElementById("ig-embed");
+      if (!holder) return;
+
+      const url = holder.getAttribute("data-ig-url");
+      if (!url) return;
+
+      let loaded = false;
+
+      function loadInstagram() {
+        if (loaded) return;
+        loaded = true;
+
+        holder.innerHTML =
+          `<blockquote class="instagram-media" data-instgrm-permalink="${url}" data-instgrm-version="14"></blockquote>`;
+
+        const s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.instagram.com/embed.js";
+        s.onload = () => window.instgrm?.Embeds?.process?.();
+        document.body.appendChild(s);
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        if (entries.some(e => e.isIntersecting)) {
+          loadInstagram();
+          io.disconnect();
+        }
+      }, { rootMargin: "300px" });
+
+      io.observe(holder);
+    })();
+  </script>
 </body>
 </html>
