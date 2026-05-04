@@ -510,7 +510,7 @@
 
         <div class="countdown-grid" id="countdown">
           <div class="countdown-item">
-            <div class="countdown-number" id="count-days">000</div>
+            <div class="countdown-number" id="count-days">0</div>
             <div class="countdown-unit">zile</div>
           </div>
 
@@ -637,24 +637,11 @@
       });
     })();
 
-    function getRomaniaNow() {
-      return new Date(
-        new Date().toLocaleString("en-US", { timeZone: "Europe/Bucharest" })
-      );
-    }
-
-    function getRomaniaDate(y, m, d, h, min, s) {
-      return new Date(
-        new Date(Date.UTC(y, m, d, h, min, s))
-          .toLocaleString("en-US", { timeZone: "Europe/Bucharest" })
-      );
-    }
-
-    // 9 mai 2026, 19:30 ora României
-    const target = getRomaniaDate(2026, 4, 9, 19, 30, 0);
+    // Setăm data fixă: 9 Mai 2026, ora 19:30
+    const target = new Date(2026, 4, 9, 19, 30, 0);
 
     function update() {
-      const now = getRomaniaNow();
+      const now = new Date();
       let diff = target - now;
       if (diff < 0) diff = 0;
 
@@ -664,7 +651,8 @@
       const minutes = Math.floor((totalSec % 3600) / 60);
       const seconds = totalSec % 60;
 
-      document.getElementById("count-days").textContent = String(days).padStart(3, "0");
+      // Aici am scos formatarea cu 3 cifre pentru zile
+      document.getElementById("count-days").textContent = String(days);
       document.getElementById("count-hours").textContent = String(hours).padStart(2, "0");
       document.getElementById("count-minutes").textContent = String(minutes).padStart(2, "0");
       document.getElementById("count-seconds").textContent = String(seconds).padStart(2, "0");
